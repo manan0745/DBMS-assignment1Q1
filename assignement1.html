@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Models & DBMS Architecture Explorer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background: #f4f7fa;
+      color: #2c3e50;
+    }
+    h1 {
+      text-align: center;
+      color: #1abc9c;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #34495e;
+      border-left: 6px solid #1abc9c;
+      padding-left: 10px;
+      margin-top: 40px;
+    }
+    .model, .architecture {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .model:hover, .architecture:hover {
+      transform: scale(1.02);
+    }
+    .diagram {
+      margin-top: 15px;
+      text-align: center;
+    }
+    .box {
+      border: 2px solid #1abc9c;
+      display: inline-block;
+      padding: 8px 14px;
+      margin: 8px;
+      border-radius: 8px;
+      background: #eafaf7;
+      font-weight: bold;
+    }
+    .arrow {
+      margin: 0 10px;
+      font-size: 20px;
+      color: #16a085;
+    }
+    pre {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌐 Data Models & DBMS Architecture Explorer</h1>
+
+  <h2>Data Models</h2>
+
+  <div class="model">
+    <h3>1. Relational Model</h3>
+    <p>Data is stored in tables (relations) consisting of rows and columns.</p>
+    <pre>
+Employee Table:
++-----------+----------+------------+
+| EmpID     | Name     | DOB        |
++-----------+----------+------------+
+| 101       | Manan    | 28-08-2006 |
+| 102       | Priyansh | 25-09-2005 |
++-----------+----------+------------+
+    </pre>
+  </div>
+
+  <div class="model">
+    <h3>2. Hierarchical Model</h3>
+    <p>Data is represented as a tree structure with parent-child relationships.</p>
+    <div class="diagram">
+      <div class="box">Company
+        <div class="box">Department
+          <div class="box">Manan</div>
+          <div class="box">Priyansh</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="model">
+    <h3>3. Network Model</h3>
+    <p>Data is represented as records connected by links (many-to-many relationships).</p>
+    <div class="diagram">
+      <div class="box">Ghanisth</div>
+      <span class="arrow">⟷</span>
+      <div class="box">Project A</div>
+      <span class="arrow">⟷</span>
+      <div class="box">Harsh</div>
+      <span class="arrow">⟷</span>
+      <div class="box">Project B</div>
+      <span class="arrow">⟷</span>
+      <div class="box">Arsh</div>
+    </div>
+  </div>
+
+  <div class="model">
+    <h3>4. Document Model</h3>
+    <p>Data is stored as documents (like JSON).</p>
+    <pre>
+{
+  "name": "Tanishq",
+  "city": "Bharatpur",
+  "pincode": "321001"
+}
+    </pre>
+  </div>
+
+  <h2>DBMS Architecture</h2>
+
+  <div class="architecture">
+    <h3>Centralized Architecture</h3>
+    <p>All data is stored and managed in a single central server.</p>
+    <div class="diagram">
+      <div class="box">User 1</div>
+      <div class="box">User 2</div>
+      <div class="box">User 3</div>
+      <div> ↓ ↓ ↓ </div>
+      <div class="box">Central DB Server</div>
+    </div>
+  </div>
+
+  <div class="architecture">
+    <h3>Client–Server Architecture</h3>
+    <p>Clients request services and the server provides responses.</p>
+    <div class="diagram">
+      <div class="box">Client</div>
+      <span class="arrow">⇆</span>
+      <div class="box">Server (DBMS)</div>
+    </div>
+  </div>
+</body>
+</html>
