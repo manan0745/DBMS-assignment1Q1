@@ -12,4 +12,5 @@ No external libraries (pure HTML + CSS only).
 So, when opened in a browser, this file displays an educational webpage that compares different data models and architectures in DBMS.
 It helps beginners quickly understand the difference between data models.
 This code generates a mini educational website to visually explain DBMS Data Models (Relational, Hierarchical, Network, Document) and 
-Architectures (Centralized, Client–Server). It was likely made for teaching, assignments, or self-learning. The diagrams are made with just HTML <div> boxes styled by CSS.
+Architectures (Centralized, Client–Server). It was likely made for teaching, assignments, or self-learning. 
+The diagrams are made with just HTML <div> boxes styled by CSS.
